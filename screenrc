@@ -1,0 +1,16 @@
+bind h focus left 
+bind l focus right 
+bind j focus down
+bind k focus up 
+
+
+hardstatus alwayslastline
+hardstatus string "%{= kG}[%{G}%H%{= r}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d%{W} %c:%s%{g}]"
+
+bindkey "^[[1;2A" screen # shift+up to create a new window
+bindkey "^[[1;2B" detach # shift+down to detach from screen
+bindkey "^[[1;2D" prev # shift+left to scroll to the left window
+bindkey "^[[1;2C" next # shift+right to scroll to the right window
+bindkey -k k8 title      #f8 to rename a window
+
+defscrollback 10000
